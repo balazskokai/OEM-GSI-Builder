@@ -80,6 +80,6 @@ jobs:
               sed -i "1s/^/Name: ${filename%.*}\n/" "$file"
               printf "\n\nBase Firmware Link: $BASE" >> "$file"
               printf "\n\nDownload Link: $SOURCEFORGE" >> "$file"
-              curl -s -d "chat_id=$chat"  --data-urlencode text@$file "$TG_URL"
+              curl -s -d "chat_id=$chat"  --data-urlencode `text@$file` "$TG_URL"
             done
           done
